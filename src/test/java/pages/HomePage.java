@@ -13,9 +13,36 @@ public class HomePage {
     @FindBy(tagName = "h2")
     private WebElement mainMenuHeader;
 
+    @FindBy(linkText = "Doctor list")
+    private WebElement doctorListLink;
+
+    @FindBy(linkText = "Hospital list")
+    private WebElement hospitalListLink;
+
+    @FindBy(linkText = "Contract list")
+    private WebElement contractListLink;
+
     public HomePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
+    public WebElement getWelcomeHeader() {
+        return welcomeHeader;
+    }
 
+    public WebElement getMainMenuHeader() {
+        return mainMenuHeader;
+    }
+
+    public void clickDoctorListButton() {
+        doctorListLink.click();
+    }
+
+    public void clickHospitalListButton() {
+        hospitalListLink.click();
+    }
+
+    public void  clickContractListButton() {
+        contractListLink.click();
+    }
 }
