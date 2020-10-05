@@ -13,7 +13,7 @@ public class BaseTest {
     @BeforeTest
     public void setUp() {
 
-        String driverPath = "C:\\Users\\BRITENET\\Desktop\\Google Drive\\FILES\\TRENING\\MZ\\12\\Selenium\\src\\test\\resources\\executables\\drivers\\geckodriver.exe";
+        String driverPath = "src/test/resources/executables/drivers/geckodriver.exe";
         System.setProperty("webdriver.gecko.driver",driverPath);
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
@@ -21,6 +21,6 @@ public class BaseTest {
 
     @AfterTest
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 }
