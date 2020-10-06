@@ -4,6 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DoctorList;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
+
 public class DoctorListTest extends BaseTest {
 
     String URL = "http://localhost:8080/doctors/list";
@@ -30,6 +34,11 @@ public class DoctorListTest extends BaseTest {
 
         Assert.assertTrue(doctorList.getClearButton().isDisplayed());
 
+        String[] expectedHeaders = {"First name", "Last name", "E-mail address", "Phone", "Details", "Delete"};
+
+        for (int i = 0; i < doctorList.getDoctorListTableHeaders().size(); i++) {
+            Assert.assertEquals(doctorList.getDoctorListTableHeaders().get(i).getText(), expectedHeaders[i]);
+        }
 
     }
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DoctorList {
 
     @FindBy(tagName = "h3")
@@ -25,7 +27,8 @@ public class DoctorList {
     @FindBy(linkText = "Clear")
     private WebElement clearButton;
 
-
+    @FindBy(xpath = "//table/thead/tr[1]/th")
+    private List<WebElement> doctorListTableHeaders;
 
     public DoctorList(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -53,5 +56,9 @@ public class DoctorList {
 
     public WebElement getClearButton() {
         return clearButton;
+    }
+
+    public List<WebElement> getDoctorListTableHeaders() {
+        return doctorListTableHeaders;
     }
 }
