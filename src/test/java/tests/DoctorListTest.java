@@ -4,10 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DoctorList;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-
 public class DoctorListTest extends BaseTest {
 
     String URL = "http://localhost:8080/doctors/list";
