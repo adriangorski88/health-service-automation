@@ -19,6 +19,21 @@ public class AddDoctor {
     @FindBy(id = "country")
     private WebElement countryDropDownList;
 
+    @FindBy(id = "city")
+    private WebElement cityTextField;
+
+    @FindBy(id = "street")
+    private WebElement streetTextField;
+
+    @FindBy(id = "email")
+    private WebElement emailTextField;
+
+    @FindBy(id = "phone")
+    private WebElement phoneNumericField;
+
+    @FindBy(id = "licenseNumber")
+    private WebElement licenseNumberField;
+
     @FindBy(xpath = "/html/body/div/div/div/div/form/div/div[1]/span")
     private WebElement firstNameSpan;
 
@@ -49,6 +64,26 @@ public class AddDoctor {
 
     public WebElement getCountryDropDownList() {
         return countryDropDownList;
+    }
+
+    public WebElement getCityTextField() {
+        return cityTextField;
+    }
+
+    public WebElement getStreetTextField() {
+        return streetTextField;
+    }
+
+    public WebElement getEmailTextField() {
+        return emailTextField;
+    }
+
+    public WebElement getPhoneNumericField() {
+        return phoneNumericField;
+    }
+
+    public WebElement getLicenseNumberField() {
+        return licenseNumberField;
     }
 
     public WebElement getFirstNameSpan() {
