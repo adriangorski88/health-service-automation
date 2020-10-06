@@ -30,6 +30,12 @@ public class DoctorList {
     @FindBy(xpath = "//table/thead/tr[1]/th")
     private List<WebElement> doctorListTableHeaders;
 
+    @FindBy(xpath = "//table/tbody/tr/td[1]")
+    private WebElement doctorListTableFirstRowFirstColumn;
+
+    @FindBy(xpath = "//tbody")
+    private WebElement doctorListTableBody;
+
     public DoctorList(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -60,5 +66,13 @@ public class DoctorList {
 
     public List<WebElement> getDoctorListTableHeaders() {
         return doctorListTableHeaders;
+    }
+
+    public WebElement getDoctorListTableFirstRowFirstColumn() {
+        return doctorListTableFirstRowFirstColumn;
+    }
+
+    public WebElement getDoctorListTableBody() {
+        return doctorListTableBody;
     }
 }
