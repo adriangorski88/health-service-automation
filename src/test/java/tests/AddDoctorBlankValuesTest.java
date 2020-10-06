@@ -25,5 +25,10 @@ public class AddDoctorBlankValuesTest extends BaseTest {
         Assert.assertEquals(addDoctor.getCountryDropDownList().getAttribute("value"), "");
 
         addDoctor.getAddDoctorButton().click();
+
+        Assert.assertEquals(addDoctor.getFirstNameSpan().getText(), "First name field cannot be blank.");
+        Assert.assertEquals(addDoctor.getLastNameSpan().getText(), "Last name field cannot be blank.");
+        Assert.assertEquals(addDoctor.getCountrySpan().getText(), "Select country.");
+
     }
 }
