@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools { 
+        maven '3.6.3' 
+        jdk 'openjdk' 
+    }
     stages {
         stage('Maven clean ') {
             steps {
