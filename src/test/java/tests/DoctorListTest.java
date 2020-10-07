@@ -36,5 +36,12 @@ public class DoctorListTest extends BaseTest {
             Assert.assertEquals(doctorList.getDoctorListTableHeaders().get(i).getText(), expectedHeaders[i]);
         }
 
+        doctorList.getAddDoctorButton().click();
+        Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:8080/doctors/new");
+        driver.navigate().back();
+
+        doctorList.getMainMenuButton().click();
+        Assert.assertEquals(driver.getCurrentUrl(), "http://localhost:8080/");
+
     }
 }

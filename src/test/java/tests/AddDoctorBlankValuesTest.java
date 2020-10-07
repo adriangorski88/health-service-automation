@@ -1,6 +1,6 @@
 package tests;
 
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AddDoctor;
 import pages.DoctorList;
