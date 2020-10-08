@@ -9,7 +9,7 @@ public class AddDoctorBlankValuesTest extends BaseTest {
 
     String URL = "http://localhost:8080/doctors/list";
 
-    @Test
+    @Test(enabled = false)
     public void addDoctorBlankValuesTest()  {
 
         driver.get(URL);

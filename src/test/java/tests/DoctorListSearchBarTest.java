@@ -9,7 +9,7 @@ public class DoctorListSearchBarTest extends BaseTest {
 
     String URL = "http://localhost:8080/doctors/list";
 
-    @Test
+    @Test(enabled = false)
     public void doctorListSearchBarTest() {
 
         driver.get(URL);

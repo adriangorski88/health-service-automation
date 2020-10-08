@@ -8,7 +8,7 @@ public class DoctorListTest extends BaseTest {
 
     String URL = "http://localhost:8080/doctors/list";
 
-    @Test
+    @Test(enabled = false)
     public void doctorListTest() {
 
         driver.get(URL);
