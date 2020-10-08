@@ -1,11 +1,7 @@
 pipeline {
     agent any
-    tools { 
-        maven 'maven' 
-        jdk 'openjdk' 
-    }
     stages {
-        stage('Maven clean ') {
+        stage('Maven clean') {
             steps {
                 sh "mvn clean"
             }
