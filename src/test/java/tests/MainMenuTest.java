@@ -1,18 +1,36 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainMenuTest extends BaseTest {
 
     String URL = "http://localhost:8080/";
 
+    public static void takeScreenshot(WebDriver driver) throws IOException {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File screenshotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        String timestamp = new SimpleDateFormat("yyyyMMdd_hhmmss").format(new Date());
+        File destinationFile = new File("src/test/resources/screenshots/screenshot" + timestamp + ".png");
+        Files.copy(screenshotFile.toPath(), destinationFile.toPath());
+    }
+
     @Test
-    public void mainMenuTest() {
+    public void mainMenuTest() throws IOException {
 
         driver.get(URL);
+        takeScreenshot(driver);
         HomePage homePage = new HomePage(driver);
 
         String expectedWelcomeHeader = "Welcome to Health Service";
