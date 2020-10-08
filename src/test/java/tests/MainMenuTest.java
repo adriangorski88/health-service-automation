@@ -31,7 +31,8 @@ public class MainMenuTest extends BaseTest {
     public void mainMenuTest() throws IOException {
 
         PropertiesFile.readPropertiesFile();
-        driver.get(URL);
+//        driver.get(URL);
+        driver.get("http://localhost:8080");
         takeScreenshot(driver);
         HomePage homePage = new HomePage(driver);
 
