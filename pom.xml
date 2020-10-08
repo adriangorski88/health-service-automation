@@ -28,8 +28,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>7</maven.compiler.release>
-        <maven.compiler.testSource>6</maven.compiler.testSource>
-        <maven.compiler.testTarget>1.6</maven.compiler.testTarget>
+        <maven.compiler.testSource>7</maven.compiler.testSource>
+        <maven.compiler.testTarget>7</maven.compiler.testTarget>
     </properties>
 
 </project>
