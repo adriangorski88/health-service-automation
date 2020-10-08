@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Maven test') {
             steps {
-                bat "mvn test-compile"
+                bat "mvn test"
             }
         }
     }
