@@ -5,6 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utils.PropertiesFile;
@@ -23,7 +24,7 @@ public class MainMenuTest extends BaseTest {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File screenshotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
         String timestamp = new SimpleDateFormat("yyyyMMdd_hhmmss").format(new Date());
-        File destinationFile = new File("src/test/resources/screenshots/screenshot" + timestamp + ".png");
+        File destinationFile = new File("C:\\Users\\BRITENET\\Desktop\\Google Drive\\FILES\\TRENING\\MZ\\12\\Selenium\\src\\test\\resources\\screenshots\\" + timestamp + ".png");
         Files.copy(screenshotFile.toPath(), destinationFile.toPath());
     }
 
@@ -31,8 +32,7 @@ public class MainMenuTest extends BaseTest {
     public void mainMenuTest() throws IOException {
 
         PropertiesFile.readPropertiesFile();
-//        driver.get(URL);
-        driver.get("http://localhost:8080");
+        driver.get(URL);
         takeScreenshot(driver);
         HomePage homePage = new HomePage(driver);
 
