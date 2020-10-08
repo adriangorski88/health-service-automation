@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import utils.PropertiesFile;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.Date;
 
 public class MainMenuTest extends BaseTest {
 
-    String URL = "http://localhost:8080/";
+    public static String URL;
 
     public static void takeScreenshot(WebDriver driver) throws IOException {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
@@ -29,6 +30,7 @@ public class MainMenuTest extends BaseTest {
     @Test
     public void mainMenuTest() throws IOException {
 
+        PropertiesFile.readPropertiesFile();
         driver.get(URL);
         takeScreenshot(driver);
         HomePage homePage = new HomePage(driver);
