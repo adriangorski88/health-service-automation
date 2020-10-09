@@ -1,0 +1,10 @@
+tests\DoctorListSearchBarTest.class
+utils\PropertiesFile.class
+tests\MainMenuTest.class
+pages\HomePage.class
+tests\AddDoctorCorrectValuesTest.class
+tests\BaseTest.class
+tests\AddDoctorBlankValuesTest.class
+pages\AddDoctor.class
+tests\DoctorListTest.class
+pages\DoctorList.class

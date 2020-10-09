@@ -5,7 +5,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utils.PropertiesFile;
@@ -35,7 +34,7 @@ public class MainMenuTest extends BaseTest {
         driver.get(URL);
         takeScreenshot(driver);
         HomePage homePage = new HomePage(driver);
-//comment
+
         String expectedWelcomeHeader = "Welcome to Health Service";
         Assert.assertEquals(homePage.getWelcomeHeader().getText(), expectedWelcomeHeader);
 
