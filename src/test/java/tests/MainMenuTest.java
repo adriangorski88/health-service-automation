@@ -26,7 +26,7 @@ public class MainMenuTest extends BaseTest {
         File destinationFile = new File("C:\\Users\\BRITENET\\Desktop\\Google Drive\\FILES\\TRENING\\MZ\\12\\Selenium\\src\\test\\resources\\screenshots\\" + timestamp + ".png");
         Files.copy(screenshotFile.toPath(), destinationFile.toPath());
     }
-
+//test
     @Test
     public void mainMenuTest() throws IOException {
 
