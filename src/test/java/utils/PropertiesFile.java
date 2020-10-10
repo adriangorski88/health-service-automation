@@ -15,8 +15,6 @@ public class PropertiesFile {
         properties.load(inputStream);
 
         MainMenuTest.URL = properties.getProperty("URL");
-        MainMenuTest.screenshotPath = properties.getProperty("screenshot_path");
-
     }
 
 }
