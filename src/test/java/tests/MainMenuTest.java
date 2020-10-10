@@ -18,15 +18,16 @@ import java.util.Date;
 public class MainMenuTest extends BaseTest {
 
     public static String URL;
+    public static String screenshotPath;
 
     public static void takeScreenshot(WebDriver driver) throws IOException {
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File screenshotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
         String timestamp = new SimpleDateFormat("yyyyMMdd_hhmmss").format(new Date());
-        File destinationFile = new File("C:\\Users\\BRITENET\\Desktop\\Google Drive\\FILES\\TRENING\\MZ\\12\\Selenium\\src\\test\\resources\\screenshots\\" + timestamp + ".png");
+        File destinationFile = new File(screenshotPath + "src\\test\\resources\\screenshots\\" + timestamp + ".png");
         Files.copy(screenshotFile.toPath(), destinationFile.toPath());
     }
-//test
+
     @Test
     public void mainMenuTest() throws IOException {
 
