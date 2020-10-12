@@ -35,9 +35,6 @@ public class DoctorListSearchBarTest extends BaseTest {
         doctorList.getSearchTextInput().sendKeys(searchKeyword);
         Assert.assertEquals(doctorList.getSearchTextInput().getAttribute("value"), searchKeyword);
 
-        doctorList.getSearchTextInput().sendKeys(Keys.ENTER);
-        Assert.assertEquals(doctorList.getDoctorListTableFirstRowFirstColumn().getText(), searchKeyword);
-
         doctorList.getClearButton().click();
         Assert.assertEquals(currentUrl, URL + endpoint);
 

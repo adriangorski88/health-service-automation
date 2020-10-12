@@ -7,12 +7,13 @@ import pages.DoctorList;
 
 public class AddDoctorBlankValuesTest extends BaseTest {
 
-    String URL = "http://localhost:8080/doctors/list";
+    public static String URL;
+    String endpoint = "/doctors/list";
 
     @Test(priority = 3)
     public void addDoctorBlankValuesTest()  {
 
-        driver.get(URL);
+        driver.get(URL + endpoint);
         DoctorList doctorList = new DoctorList(driver);
         AddDoctor addDoctor = new AddDoctor(driver);
 

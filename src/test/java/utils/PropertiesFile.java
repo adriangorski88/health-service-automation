@@ -1,9 +1,6 @@
 package utils;
 
-import tests.BaseTest;
-import tests.DoctorListSearchBarTest;
-import tests.DoctorListTest;
-import tests.MainMenuTest;
+import tests.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,6 +17,7 @@ public class PropertiesFile {
         MainMenuTest.URL = properties.getProperty("URL");
         DoctorListTest.URL = properties.getProperty("URL");
         DoctorListSearchBarTest.URL = properties.getProperty("URL");
+        AddDoctorBlankValuesTest.URL = properties.getProperty("URL");
         BaseTest.browser = properties.getProperty("browser");
 
     }
