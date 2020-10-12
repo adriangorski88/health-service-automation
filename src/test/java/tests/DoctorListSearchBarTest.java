@@ -30,7 +30,7 @@ public class DoctorListSearchBarTest extends BaseTest {
 
         doctorList.getClearButton().click();
         String currentUrl = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrl, URL);
+        Assert.assertEquals(currentUrl, URL + endpoint);
 
         doctorList.getSearchTextInput().sendKeys(searchKeyword);
         Assert.assertEquals(doctorList.getSearchTextInput().getAttribute("value"), searchKeyword);
@@ -39,7 +39,7 @@ public class DoctorListSearchBarTest extends BaseTest {
         Assert.assertEquals(doctorList.getDoctorListTableFirstRowFirstColumn().getText(), searchKeyword);
 
         doctorList.getClearButton().click();
-        Assert.assertEquals(currentUrl, URL);
+        Assert.assertEquals(currentUrl, URL + endpoint);
 
         Assert.assertEquals(doctorList.getSearchTextInput().getAttribute("value"), "");
         doctorList.getSearchButton().click();

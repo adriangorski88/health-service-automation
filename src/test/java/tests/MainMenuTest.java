@@ -1,9 +1,7 @@
 package tests;
 
 import org.openqa.selenium.By;
-import org.testng.ITestResult;
 import org.testng.annotations.Test;
-import org.testng.internal.TestResult;
 import pages.HomePage;
 import utils.PropertiesFile;
 
