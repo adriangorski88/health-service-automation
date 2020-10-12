@@ -4,15 +4,20 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DoctorList;
+import utils.PropertiesFile;
+
+import java.io.IOException;
 
 public class DoctorListSearchBarTest extends BaseTest {
 
-    String URL = "http://localhost:8080/doctors/list";
+    public static String URL;
+    String endpoint = "/doctors/list";
 
-    @Test(enabled = false)
-    public void doctorListSearchBarTest() {
+    @Test(priority = 2)
+    public void doctorListSearchBarTest() throws IOException {
 
-        driver.get(URL);
+        PropertiesFile.readPropertiesFile();
+        driver.get(URL + endpoint);
 
         DoctorList doctorList = new DoctorList(driver);
 

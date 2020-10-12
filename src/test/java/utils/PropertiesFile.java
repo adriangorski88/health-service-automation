@@ -1,5 +1,8 @@
 package utils;
 
+import tests.BaseTest;
+import tests.DoctorListSearchBarTest;
+import tests.DoctorListTest;
 import tests.MainMenuTest;
 
 import java.io.FileInputStream;
@@ -15,6 +18,10 @@ public class PropertiesFile {
         properties.load(inputStream);
 
         MainMenuTest.URL = properties.getProperty("URL");
+        DoctorListTest.URL = properties.getProperty("URL");
+        DoctorListSearchBarTest.URL = properties.getProperty("URL");
+        BaseTest.browser = properties.getProperty("browser");
+
     }
 
 }

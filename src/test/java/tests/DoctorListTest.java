@@ -3,15 +3,22 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DoctorList;
+import utils.PropertiesFile;
+
+import java.io.IOException;
+import java.util.Properties;
 
 public class DoctorListTest extends BaseTest {
 
-    String URL = "http://localhost:8080/doctors/list";
+    public static String URL;
+    String endpoint = "/doctors/list";
 
-    @Test(enabled = false)
-    public void doctorListTest() {
+    @Test(priority = 1)
+    public void doctorListTest() throws IOException {
 
-        driver.get(URL);
+
+        PropertiesFile.readPropertiesFile();
+        driver.get(URL + endpoint);
         DoctorList doctorList = new DoctorList(driver);
 
         String expectedHeader = "Doctor list";
